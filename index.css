@@ -1,0 +1,173 @@
+body{
+    width:100%;
+    height:100%;
+}
+
+
+.main-container {
+    width:100%;
+    height:654px;
+    display: flex;
+    flex-direction: row;
+}
+
+.message-container {
+    width:30%;
+    height: 100%;
+    box-shadow:0px 5px 10px grey;
+    font-family: 'Quicksand', sans-serif;
+    display:block;
+    transition: 0.5s ease-in-out;
+}
+
+.message-head {
+    width:100%;
+    height:15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-body {
+    width:100%;
+    height:75%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    scrollbar-width: none;
+    overflow: scroll;
+}
+
+.message-body table td {
+    text-align: center;
+}
+
+
+.application-container {
+    width: 70%;
+    height:100%;
+    font-family: 'Quicksand', sans-serif;
+    transition: 0.5s ease-in-out;
+}
+
+.burger-container {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.burger-container button {
+    margin:0px 0px 0px 10px;
+}
+
+.text-controller {
+    width:100%;
+    height:60%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text-controller select, .text-controller input{
+    width:60%;
+    margin:13px 0px 0px 0px;
+}
+
+.text-controller span {
+    width:60%;
+    text-align: center;
+}
+
+.text-controller button {
+    width:42%;
+    margin:17px 0px 0px 0px;
+}
+
+
+.audio-controller {
+    width:100%;
+    height:30%;
+    display: flex;
+    flex-direction: row;
+}
+
+.audio-actions{
+    width:20%;
+    height:20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.audio-volume {
+    width:20%;
+    height:20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.audio-volume input{
+    width: 60%;
+    margin-top:8px;
+}
+
+.audio-duration {
+    width:60%;
+    height:20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(min-width:300px) and (max-width:1000px){
+    .burger-container{
+        display: none;
+    }
+
+    .main-container {
+        flex-direction: column-reverse;
+    }
+
+    .message-container {
+        width:100%;
+        height:35%;
+        display: block;
+    }
+
+    .application-container {
+        width:100%;
+        height:65%;
+    }
+
+    .audio-duration{
+        display: none;
+    }
+
+    .audio-actions, .audio-volume {
+        width:50%;
+    }
+
+    .text-controller select, .text-controller input {
+        width:80%;
+    }
+
+    .text-controller span {
+        width: 90%;
+    }
+
+    .text-controller button {
+        width: 47%;
+        font-size:14px;
+    }
+}
+
+@media(min-width:1500px) and (max-width:2000px){
+    .main-container {
+        height:954px;
+    }
+}

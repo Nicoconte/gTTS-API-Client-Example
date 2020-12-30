@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Speech Prototype</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+	<!-- Boostrap 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- SweetAlert CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+</head>
+<body>
+    
+    <section class="main-container">
+
+        <div class="application-container">
+
+            <div class="burger-container">
+                <button id="burger-btn" class="btn btn-outline-dark mt-1"> <i class="fa fa-bars"></i> </button>
+            </div>
+
+            <div class="text-controller">
+                
+                <div id="error-container" class="alert alert-danger w-50 mt-3 justify-content-center align-items-center" role="alert" style="display:none; z-index:1000;">
+                    <p id="error-message"></p>
+                </div>
+
+                <select name="" id="language-chooser" class="form-control">
+                    <option selected disabled >Seleccione un idioma</option>
+                    <option value="es">Español</option>
+                    <option value="en">Ingles</option>
+                    <option value="fr">Frances</option>
+                </select>
+
+                <input type="text" id="text-to-translate" class="form-control" placeholder="Introduzca su mensaje">
+
+                <span>
+                    <button id="translate-btn" class="btn btn-info">Reproducir mensaje <i class="fa fa-play ml-2"></i> </button>
+                    <button id="reset-text-input" class="btn btn-success ml-3">Limpiar texto <i class=""></i> </button>
+                </span>
+            </div>
+
+            <div class="audio-controller">
+                <!--
+                <div class="audio-actions">
+                    <button class="btn btn-info btn-sm rounded-circle"> <i class="fa fa-play"></i> </button>
+                    <button class="btn btn-success btn-sm rounded-circle ml-2"> <i class="fa fa-pause"></i> </button>
+                    <button class="btn btn-warning btn-sm rounded-circle ml-2"> <i class="fa fa-refresh text-white"></i> </button>
+                </div>
+                 
+                <div class="audio-duration">
+                    <div class='progress mt-2 w-100' id='progress-bar-container' data-toggle="tooltip" data-placement="right" title="">
+                        <progress value="0" min="0" max="100" class='progress-bar text-dark bg-primary' id='audio-bar' style='width:0%; height:100%;'></progress>
+                    </div>                    
+                </div>
+
+                <div class="audio-volume">
+                    <input type="range" name='slider' min="1" max="100" value='100' id='slider'>
+                </div>
+                -->
+            </div>
+
+        </div>
+
+        <div class="message-container">
+            <div class="message-head">
+                <h3>Mensajes <i class="fa fa-book ml-2"></i></h3>
+            </div>
+            <div class="message-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>Texto</td>
+                            <td>Idioma</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody id="message-table"></tbody>
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+<script src="index.js"></script>
+<script src="jquery-ajax-native.js"></script>
+</body>
+</html>
